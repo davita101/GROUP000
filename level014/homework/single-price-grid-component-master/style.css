@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-100: hsl(179, 62%, 43%);
+    --primary-200: hsl(71, 73%, 54%);
+
+    --neutral-100: hsl(204, 43%, 93%);
+    --neutral-200: hsl(218, 22%, 67%);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-family: "Karla", sans-serif;
+    background-color: var(--neutral-100);
+}
+
+.container {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+}
+
+/* typography */
+.box-1 {
+    font-size: 15px;
+}
+
+.box-1 h2 {
+    color: var(--primary-100);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.box-1 h3 {
+    color: var(--primary-200);
+    font-weight: 700;
+    max-width: 300px;
+    line-height: 20px;
+    font-size: 18px;
+
+}
+
+.box-1 p {
+    color: var(--neutral-200);
+    line-height: 23px;
+    max-width: 350px;
+}
+
+/* box2  */
+.box-2 {
+    background-color: var(--primary-100);
+    color: white;
+}
+
+/* typography */
+.box-2 h2 {
+    font-weight: 700;
+}
+
+.box-2 h3 {
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box-2 span {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--neutral-100);
+}
+
+.box-2 button {
+    background-color: var(--primary-200);
+    border: none;
+    border-radius: 5px;
+    padding: 15px 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* box-3 */
+.box-3 {
+    color: white;
+    background-color: hsl(179, 62%, 43%, .8);
+}
+
+.box-3 h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.box-3 p {
+    line-height: 23px;
+    font-size: 15px;
+    max-width: 200px;
+}
+
+@media (min-width: 450px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .box-1 {
+        grid-column: 1/2 span;
+    }
+
+    .box {
+        padding: 2rem;
+    }
+    .box-1 p{
+        max-width: 500px;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 100%;
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+        .box:nth-child(1) {
+            background-color: beige;
+        }
+
+        .box:nth-child(2) {
+            background-color: azure;
+        }
+
+        .box:nth-child(3) {
+            background-color: black;
+        }
+
+        .box:nth-child(4) {
+            background-color: brown;
+        }
+
+        .container {
+            margin: 1rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .box:nth-child(5) {
+            grid-row: 2;
+        }
+
+        .box:nth-child(4) {
+            grid-column: 2 / 3 span;
+        }
+
+        @media (max-width:800px) {
+            .container{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .box:nth-child(3) {
+                grid-row: 2;
+            }
+
+            .box:nth-child(4) {
+                grid-column: 1 / 2 span;
+            }
+        }
+        @media (max-width: 500px) {
+            .container{
+                grid-template-columns: repeat(1,1fr);
+            }
+            .box:nth-child(3) {
+                grid-row: 1;
+            }
+
+            .box:nth-child(4) {
+                grid-column: 1
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
